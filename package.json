@@ -1,0 +1,21 @@
+{
+	"name": "@adlad/plugin-adinplay",
+	"version": "0.0.1",
+	"description": "AdLad plugin for the AdinPlay sdk.",
+	"main": "mod.js",
+	"types": "dist/adlad-plugin-adinplay.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Pelican-Party/adlad-plugin-adinplay.git"
+	},
+	"keywords": [
+		"ads",
+		"adinplay"
+	],
+	"author": "Pelican Party Studios",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Pelican-Party/adlad-plugin-adinplay/issues"
+	},
+	"homepage": "https://github.com/Pelican-Party/adlad-plugin-adinplay#readme"
+}

@@ -23,9 +23,8 @@ export function adinPlayPlugin({
 		fullScreenPromiseCbs.clear();
 	}
 
-	/** @type {import("$adlad").AdLadPlugin} */
 	const plugin = {
-		name: "adinplay",
+		name: /** @type {const} */ ("adinplay"),
 		async initialize() {
 			/** @type {any} */
 			const aiptag = window["aiptag"] = window.aiptag || {};
