@@ -1,4 +1,10 @@
 /**
+ * @template {import("$adlad").AdLadPlugin} T
+ * @param {T} plugin
+ */
+const makePlugin = plugin => plugin;
+
+/**
  * @param {Object} options
  * @param {string} options.publisher Publisher string used for fetching the script url. If you were told to include `https://api.adinplay.com/libs/aiptag/pub/PUBLISHER/SITE/tag.min.js` on your page, then `PUBLISHER` would be your publisher id.
  * @param {string} options.site Site string used for fetching the script url. If you were told to include `https://api.adinplay.com/libs/aiptag/pub/PUBLISHER/SITE/tag.min.js` on your page, then `SITE` would be your site id.
@@ -23,8 +29,8 @@ export function adinPlayPlugin({
 		fullScreenPromiseCbs.clear();
 	}
 
-	const plugin = {
-		name: /** @type {const} */ ("adinplay"),
+	const plugin = makePlugin(/** @type {const} */ ({
+		name: "adinplay",
 		async initialize() {
 			/** @type {any} */
 			const aiptag = window["aiptag"] = window.aiptag || {};
@@ -123,6 +129,6 @@ export function adinPlayPlugin({
 			}
 			window.aiptag.cmd.display.push(() => window.aipDisplayTag.display(id));
 		},
-	};
+	}));
 	return plugin;
 }
