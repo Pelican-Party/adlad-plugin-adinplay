@@ -15,8 +15,7 @@ interface AipPlayerOptions {
 	AIP_NOADS: () => void;
 }
 
-// deno-lint-ignore no-unused-vars
-class aipPlayer {
+declare class aipPlayer {
 	constructor(options: AipPlayerOptions);
-	startPreRoll() {}
+	startPreRoll(): void;
 }
