@@ -123,6 +123,11 @@ export function adinPlayPlugin({
 			}
 			window.aiptag.cmd.display.push(() => window.aipDisplayTag.display(id));
 		},
+		destroyBannerAd({ el }) {
+			while (el.childElementCount) {
+				el.children[0].remove();
+			}
+		},
 	});
 	return plugin;
 }
