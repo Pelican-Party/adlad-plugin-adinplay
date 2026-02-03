@@ -1,6 +1,7 @@
 interface Window {
 	aiptag: any;
 	aipDisplayTag: any;
+	aipAPItag: any;
 }
 
 interface AipPlayerOptions {

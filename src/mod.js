@@ -128,6 +128,11 @@ export function adinPlayPlugin({
 				el.children[0].remove();
 			}
 		},
+		customRequests: {
+			showConsentScreen() {
+				window.aipAPItag.showCMPScreen();
+			},
+		},
 	});
 	return plugin;
 }
